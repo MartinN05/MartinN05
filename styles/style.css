@@ -1,12 +1,12 @@
+/* =========================
+   BASIC PAGE SETTINGS
+   ========================= */
 
-/* BASIC PAGE SETTINGS       */
-
-
-body{
+body {
   margin: 0;
   font-family: Arial, sans-serif;
 
-  /* Italian flag vertical stripes */
+  /* Italian flag background */
   background: linear-gradient(
     to right,
     green 33%,
@@ -16,66 +16,58 @@ body{
   );
 }
 
-/* HEADER SECTION            */
 
+/* =========================
+   HEADER SECTION
+   ========================= */
 
-.site-header{
-  max-width: 900px;      /* keeps content centered */
-  margin: 40px auto;     /* adds space top and bottom */
-  background:#c62828;;     /* makes content stand out */
-  padding: 30px;         /* space inside box */
-  border: 3px solid transparent; /* simple border */
+.site-header {
+  max-width: 900px;
+  margin: 40px auto;
+  background: #c62828;
+  padding: 30px;
+  border: 3px solid transparent;
 }
 
-.section-title{
-  font-size: 32px;
-  margin-top: 25px;
-  margin-bottom: 15px;
+.header-wrap {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
 }
 
-/* centers header content and limits width */
-.header-wrap{
-  max-width: 900px; /* keeps header same width as page */
-  margin: 0 auto; /* centers header */
-  display: flex; /* places logo and nav side by side */
-  align-items: center; /* vertically aligns items */
-}
-
-/* controls logo size */
-.logo{
+.logo {
   width: 180px;
 }
 
 
+/* =========================
+   NAVIGATION MENU
+   ========================= */
 
-/* NAVIGATION MENU           */
-
-
-.nav{
-  margin-left: auto; /* pushes navigation to the right */
-  display: flex; /* puts menu items in one row */
-  gap: 40px; /* space between menu items */
-  font-size: 24px; /* size of navigation text */
+.nav {
+  margin-left: auto;
+  display: flex;
+  gap: 40px;
+  font-size: 24px;
 }
 
-/* makes nav items look clickable */
-.nav a{
-  text-decoration: none; /* removes underline */
-  color: white; /* best color that we could ever do lol */
+.nav a {
+  text-decoration: none;
+  color: white;
   font-weight: bold;
 }
 
-.nav a:hover{
-  text-decoration: underline; /* simple hover effect */
+.nav a:hover {
+  text-decoration: underline;
 }
 
 
+/* =========================
+   MAIN PAGE CONTENT
+   ========================= */
 
-/* MAIN PAGE CONTENT         */
-
-
-/* Main content container */
-.page{
+.page {
   max-width: 900px;
   margin: 40px auto;
   background: white;
@@ -83,64 +75,104 @@ body{
   border: 2px solid #ccc;
 }
 
-.page p{
+.page p {
   font-size: 18px;
   line-height: 1.5;
   margin-bottom: 25px;
-}   /*Makes the text bigger and easier to read */
+}
 
-/* section titles styling */
-.section-title{
-  font-size: 36px; /* larger heading size */
-  margin: 20px 0 10px; /* spacing above and below headings */
+.section-title {
+  font-size: 36px;
+  margin: 20px 0 10px;
+}
+
+.page img {
+  width: 100%;
+  margin: 20px 0;
 }
 
 
+/* =========================
+   HOME PAGE DISH PREVIEW
+   ========================= */
 
-/* POPULAR DISHES SECTION    */
-
-
-.popular{
-  display: flex; /* places dishes in a row */
-  gap: 20px; /* space between dishes */
+.popular {
+  display: flex;
+  gap: 20px;
   margin-top: 10px;
 }
 
-/* individual dish box */
-.dish{
-  background: white; /* white background for each dish */
+.dish {
+  background: white;
   padding: 10px;
-  text-align: center; /* centers text */
-  border: 1px solid #ccc; /* simple border */
-  flex: 1; /* makes all dish boxes equal width */
+  text-align: center;
+  border: 1px solid #ccc;
+  flex: 1;
 }
 
-/* dish image styling */
-.dish img{
-  width: 100%; /* fills width of box */
-  height: 140px; /* keeps consistent image height */
-  object-fit: cover; /* prevents img stretching */
+.dish img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
 }
 
 
+/* =========================
+   ABOUT SECTION
+   ========================= */
 
-/* ABOUT SECTION             */
-
-
-.about{
-  background: transparent; /* white background box */
+.about {
+  background: transparent;
   padding: 15px;
   margin-top: 10px;
   text-align: center;
-  font-size: 18px; /* simple border */
+  font-size: 18px;
 }
 
 
+/* =========================
+   MENU PAGE
+   ========================= */
 
-/* FOOTER SECTION            */
+.menu-intro {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.menu-grid {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.menu-item {
+  background: white;
+  border: 1px solid #ccc;
+  padding: 15px;
+  text-align: center;
+  flex: 1;
+}
+
+.menu-item img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.price {
+  font-weight: bold;
+}
+
+.menu-item:hover {
+  border: 2px solid #c62828;
+}
 
 
-.site-footer{
+/* =========================
+   FOOTER SECTION
+   ========================= */
+
+.site-footer {
   max-width: 900px;
   margin: 20px auto 40px;
   padding: 20px;
@@ -150,83 +182,29 @@ body{
   font-size: 16px;
 }
 
-/* RESPONSIVE LAYOUT */
-@media (max-width: 768px){
-  .popular{
-    flex-direction: column; /* stacks items on smaller screens */
+
+/* =========================
+   RESPONSIVE LAYOUT
+   ========================= */
+
+@media (max-width: 768px) {
+  .popular {
+    flex-direction: column;
   }
 
-  .header-wrap{
-    flex-direction: column; /* stacks logo and nav */
+  .menu-grid {
+    flex-direction: column;
+  }
+
+  .header-wrap {
+    flex-direction: column;
     text-align: center;
   }
 
-  .nav{
+  .nav {
     margin-left: 0;
     margin-top: 15px;
     flex-wrap: wrap;
     justify-content: center;
   }
-}
-
-/* Menu intro paragraph */
-.menu-intro{
-  font-size: 18px;
-  margin-bottom: 20px;
-}
-
-/* Menu layout for rows of dishes */
-.menu-grid{
-  display: flex;
-  gap: 20px;
-  margin-bottom: 30px;
-}
-
-/* Individual menu card */
-.menu-item{
-  background: white;
-  border: 1px solid #ccc;
-  padding: 15px;
-  text-align: center;
-  flex: 1;
-}
-
-/* Menu item images */
-.menu-item img{
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
-}
-
-/* Price styling */
-.price{
-  font-weight: bold;
-}
-
-/* Simple hover effect for menu cards */
-.menu-item:hover{
-  border: 2px solid #c62828;
-}
-
-/* Responsive layout for smaller screens */
-@media (max-width: 768px){
-  .menu-grid{
-    flex-direction: column;
-  }
-
-  .header-wrap{
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .nav{
-    margin-left: 0;
-    margin-top: 15px;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-}
-.page img{
-  width:100%;
-  margin:20px 0;
 }
