@@ -1,0 +1,133 @@
+
+/* BASIC PAGE SETTINGS       */
+
+
+body{
+  margin: 0;
+  font-family: Arial, sans-serif;
+
+  /* Italian flag vertical stripes */
+  background: linear-gradient(
+    to right,
+    green 33%,
+    white 33%,
+    white 66%,
+    red 66%
+  );
+}
+
+
+
+/* HEADER SECTION            */
+
+
+.site-header{
+  max-width: 900px;      /* keeps content centered */
+  margin: 40px auto;     /* adds space top and bottom */
+  background:#c62828;;     /* makes content stand out */
+  padding: 30px;         /* space inside box */
+  border: 3px solid transparent; /* simple border */
+}
+
+/* centers header content and limits width */
+.header-wrap{
+  max-width: 900px; /* keeps header same width as page */
+  margin: 0 auto; /* centers header */
+  display: flex; /* places logo and nav side by side */
+  align-items: center; /* vertically aligns items */
+}
+
+/* controls logo size */
+.logo{
+  width: 180px;
+}
+
+
+
+/* NAVIGATION MENU           */
+
+
+.nav{
+  margin-left: auto; /* pushes navigation to the right */
+  display: flex; /* puts menu items in one row */
+  gap: 40px; /* space between menu items */
+  font-size: 24px; /* size of navigation text */
+}
+
+/* makes nav items look clickable */
+.nav span{
+  cursor: pointer;
+}
+
+
+
+/* MAIN PAGE CONTENT         */
+
+
+/* Main content container */
+.page{
+  max-width: 900px;
+  margin: 40px auto;
+  background: white;  /* important */
+  padding: 30px;
+  border: 2px solid #ccc;
+}
+
+
+/* section titles styling */
+.section-title{
+  font-size: 36px; /* larger heading size */
+  margin: 20px 0 10px; /* spacing above and below headings */
+}
+
+
+
+/* POPULAR DISHES SECTION    */
+
+
+.popular{
+  display: flex; /* places dishes in a row */
+  gap: 20px; /* space between dishes */
+  margin-top: 10px;
+}
+
+/* individual dish box */
+.dish{
+  background: white; /* white background for each dish */
+  padding: 10px;
+  text-align: center; /* centers text */
+  border: 1px solid #ccc; /* simple border */
+  flex: 1; /* makes all dish boxes equal width */
+}
+
+/* dish image styling */
+.dish img{
+  width: 100%; /* fills width of box */
+  height: 140px; /* keeps consistent image height */
+  object-fit: cover; /* prevents img stretching */
+}
+
+
+
+/* ABOUT SECTION             */
+
+
+.about{
+  background: transparent; /* white background box */
+  padding: 15px;
+  margin-top: 10px;
+  text-align: center;
+  font-size: 18px /* simple border */
+}
+
+
+
+/* FOOTER SECTION            */
+
+
+.site-footer{
+  background: transparent; /* footer background color */
+  padding: 20px 0;
+  text-align: center;
+  font-size: 16px;
+}
