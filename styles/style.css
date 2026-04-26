@@ -2,18 +2,29 @@
    BASIC PAGE SETTINGS
    ========================= */
 
-body {
+/* Full page styling */
+body{
   margin: 0;
   font-family: Arial, sans-serif;
 
-  /* Italian flag background */
+  /* Italian flag animated background */
   background: linear-gradient(
-    to right,
+    90deg,
     green 33%,
     white 33%,
     white 66%,
     red 66%
   );
+
+  background-size: 300% 300%;
+  animation: waveFlag 8s infinite ease-in-out;
+}
+
+/* Makes background move like flag in wind */
+@keyframes waveFlag{
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 
@@ -21,22 +32,24 @@ body {
    HEADER SECTION
    ========================= */
 
-.site-header {
+/* Main top header */
+.site-header{
   max-width: 900px;
   margin: 40px auto;
   background: #c62828;
   padding: 30px;
-  border: 3px solid transparent;
+  border-radius: 15px;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.15);
 }
 
-.header-wrap {
-  max-width: 900px;
-  margin: 0 auto;
+/* Holds logo + navigation */
+.header-wrap{
   display: flex;
   align-items: center;
 }
 
-.logo {
+/* Logo size */
+.logo{
   width: 180px;
 }
 
@@ -45,21 +58,26 @@ body {
    NAVIGATION MENU
    ========================= */
 
-.nav {
+/* Navigation row */
+.nav{
   margin-left: auto;
   display: flex;
-  gap: 40px;
+  gap: 35px;
   font-size: 24px;
 }
 
-.nav a {
+/* Navigation links */
+.nav a{
   text-decoration: none;
   color: white;
   font-weight: bold;
+  transition: 0.3s;
 }
 
-.nav a:hover {
-  text-decoration: underline;
+/* Hover effect */
+.nav a:hover{
+  color: #ffd54f;
+  transform: scale(1.05);
 }
 
 
@@ -67,28 +85,36 @@ body {
    MAIN PAGE CONTENT
    ========================= */
 
-.page {
+/* White content box */
+.page{
   max-width: 900px;
   margin: 40px auto;
   background: white;
   padding: 40px;
+  border-radius: 15px;
   border: 2px solid #ccc;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
 }
 
-.page p {
+/* Paragraph text */
+.page p{
   font-size: 18px;
-  line-height: 1.5;
-  margin-bottom: 25px;
+  line-height: 1.6;
+  margin-bottom: 20px;
 }
 
-.section-title {
-  font-size: 36px;
-  margin: 20px 0 10px;
+/* Titles */
+.section-title{
+  font-size: 34px;
+  margin: 20px 0 15px;
+  color: #c62828;
 }
 
-.page img {
+/* Images inside content */
+.page img{
   width: 100%;
   margin: 20px 0;
+  border-radius: 10px;
 }
 
 
@@ -96,24 +122,36 @@ body {
    HOME PAGE DISH PREVIEW
    ========================= */
 
-.popular {
+/* Holds dishes in row */
+.popular{
   display: flex;
   gap: 20px;
-  margin-top: 10px;
+  margin-top: 15px;
 }
 
-.dish {
+/* Dish card */
+.dish{
   background: white;
-  padding: 10px;
+  padding: 12px;
   text-align: center;
   border: 1px solid #ccc;
+  border-radius: 10px;
   flex: 1;
+  transition: 0.3s;
 }
 
-.dish img {
+/* Dish hover */
+.dish:hover{
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+}
+
+/* Dish image */
+.dish img{
   width: 100%;
   height: 140px;
   object-fit: cover;
+  border-radius: 8px;
 }
 
 
@@ -121,10 +159,8 @@ body {
    ABOUT SECTION
    ========================= */
 
-.about {
-  background: transparent;
+.about{
   padding: 15px;
-  margin-top: 10px;
   text-align: center;
   font-size: 18px;
 }
@@ -134,36 +170,48 @@ body {
    MENU PAGE
    ========================= */
 
-.menu-intro {
+/* Intro paragraph */
+.menu-intro{
   font-size: 18px;
   margin-bottom: 20px;
 }
 
-.menu-grid {
+/* Row of menu cards */
+.menu-grid{
   display: flex;
   gap: 20px;
   margin-bottom: 30px;
 }
 
-.menu-item {
+/* Menu card */
+.menu-item{
   background: white;
   border: 1px solid #ccc;
   padding: 15px;
   text-align: center;
+  border-radius: 10px;
   flex: 1;
+  transition: 0.3s;
 }
 
-.menu-item img {
+/* Menu images */
+.menu-item img{
   width: 100%;
   height: 150px;
   object-fit: cover;
+  border-radius: 8px;
 }
 
-.price {
+/* Price text */
+.price{
   font-weight: bold;
+  color: #c62828;
 }
 
-.menu-item:hover {
+/* Hover effect */
+.menu-item:hover{
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.2);
   border: 2px solid #c62828;
 }
 
@@ -172,14 +220,16 @@ body {
    FOOTER SECTION
    ========================= */
 
-.site-footer {
+.site-footer{
   max-width: 900px;
   margin: 20px auto 40px;
   padding: 20px;
   text-align: center;
   background: white;
+  border-radius: 15px;
   border: 2px solid #ccc;
   font-size: 16px;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.15);
 }
 
 
@@ -187,24 +237,47 @@ body {
    RESPONSIVE LAYOUT
    ========================= */
 
-@media (max-width: 768px) {
-  .popular {
+@media (max-width: 768px){
+
+  /* Stack homepage dishes */
+  .popular{
     flex-direction: column;
   }
 
-  .menu-grid {
+  /* Stack menu cards */
+  .menu-grid{
     flex-direction: column;
   }
 
-  .header-wrap {
+  /* Stack logo and nav */
+  .header-wrap{
     flex-direction: column;
     text-align: center;
   }
 
-  .nav {
+  /* Mobile nav */
+  .nav{
     margin-left: 0;
     margin-top: 15px;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 15px;
+    font-size: 20px;
+  }
+
+  /* Smaller logo */
+  .logo{
+    width: 140px;
+    margin-bottom: 15px;
+  }
+
+  /* Smaller content padding */
+  .page{
+    padding: 25px;
+  }
+
+  /* Smaller headings */
+  .section-title{
+    font-size: 28px;
   }
 }

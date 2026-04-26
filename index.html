@@ -1,107 +1,222 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Buon Cibo | Menu</title>
 
-  <!-- External CSS file -->
-  <link rel="stylesheet" href="styles/style.css">
+    <!-- Character encoding -->
+    <meta charset="UTF-8">
+
+    <!-- Mobile responsive support -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Website title shown in browser tab -->
+    <title>Buon Cibo | Home</title>
+
+    <!-- Bootstrap CSS Library -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet">
+
+    <!-- Font Awesome Icons Library -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- External CSS File -->
+    <link rel="stylesheet" href="styles/style.css">
+
 </head>
 
 <body>
 
-  <!-- Header -->
-  <header class="site-header">
-    <div class="header-wrap">
+<!-- =========================
+HEADER SECTION
+========================= -->
 
-      <!-- Logo -->
-      <img class="logo" src="Images/Logo.png" alt="Buon Cibo Logo">
+<header class="site-header">
 
-      <!-- Navigation links -->
-      <nav class="nav">
-        <a href="index.html">Home</a>
-        <a href="menu.html">Menu</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-      </nav>
+    <div class="container">
+
+        <div class="header-wrap">
+
+            <!-- Restaurant Logo -->
+            <img src="Images/Logo.png" alt="Buon Cibo Logo" class="logo">
+
+            <!-- Navigation Menu -->
+            <nav class="nav">
+
+                <a href="index.html">Home</a>
+
+                <a href="menu.html">Menu</a>
+
+                <a href="about.html">About</a>
+
+                <a href="contact.html">Contact</a>
+
+                <a href="order.html">Order</a>
+
+            </nav>
+
+        </div>
 
     </div>
-  </header>
+
+</header>
 
 
-  <!-- MAIN CONTENT  -->
-  <main class="page">
+<!-- =========================
+MAIN CONTENT
+========================= -->
 
-  <h1 class="section-title">Welcome to Buon Cibo</h1>
-  <p>
-    Buon Cibo is an Italian restaurant inspired by the rich flavors and traditions of Naples, Italy.
-    We bring together authentic recipes, fresh ingredients, and a warm dining experience for every guest.
-  </p>
+<main class="page container">
 
-  <h2 class="section-title">Our Story</h2>
-  <p>
-    Italian food is known around the world for its simplicity, freshness, and tradition. At Buon Cibo,
-    our dishes are inspired by the origins of Italian cuisine, where meals are made with care and shared with family.
-  </p>
+    <!-- Welcome Title -->
+    <h1 class="section-title">
+        Welcome to Buon Cibo
+    </h1>
 
-  <h2 class="section-title">Why Choose Buon Cibo?</h2>
-  <p>
-    Our restaurant offers a wide variety of dishes including pasta, pizza, risotto, and desserts.
-    We focus on quality ingredients, traditional flavors, and recipes that reflect the heart of Italian cooking.
-  </p>
+    <!-- Intro paragraph -->
+    <p>
+        Buon Cibo means <strong>Good Food</strong> in Italian.
+        Our restaurant is inspired by the traditions of Naples, Italy.
+        We serve authentic meals made with fresh ingredients,
+        warm hospitality, and passion.
+    </p>
 
-  <h2 class="section-title">Popular Dishes</h2>
-  <div class="popular">
-    <div class="popular">
 
-  <div class="dish">
-    <img src="Images/Pasta_Risotto.png" alt="Pasta and Risotto">
-    <p>Primi (Pasta & Risotto)</p>
-  </div>
+    <!-- Story Section -->
+    <h2 class="section-title">
+        Our Story
+    </h2>
 
-  <div class="dish">
-    <img src="Images/Pizza.png" alt="Pizza">
-    <p>Pizza</p>
-  </div>
+    <p>
+        Italian cuisine is famous around the world for simplicity,
+        fresh ingredients, and family traditions.
+        At Buon Cibo, we bring these values to life through every dish.
+    </p>
 
-  <div class="dish">
-    <img src="Images/Dessert.png" alt="Dessert">
-    <p>Dessert</p>
-  </div>
 
-</div>
-  </div>
+    <!-- Why Choose Us -->
+    <h2 class="section-title">
+        Why Choose Buon Cibo?
+    </h2>
+
+    <div class="row text-center">
+
+        <div class="col-md-4 feature-box">
+            <i class="fa-solid fa-pizza-slice feature-icon"></i>
+            <h4>Authentic Recipes</h4>
+            <p>Traditional dishes inspired by Italy.</p>
+        </div>
+
+        <div class="col-md-4 feature-box">
+            <i class="fa-solid fa-leaf feature-icon"></i>
+            <h4>Fresh Ingredients</h4>
+            <p>Only quality ingredients used daily.</p>
+        </div>
+
+        <div class="col-md-4 feature-box">
+            <i class="fa-solid fa-heart feature-icon"></i>
+            <h4>Warm Experience</h4>
+            <p>Dining that feels welcoming and memorable.</p>
+        </div>
+
+    </div>
+
+
+    <!-- Popular Dishes -->
+    <h2 class="section-title mt-5">
+        Popular Dishes
+    </h2>
+
+    <div class="row">
+
+        <!-- Dish 1 -->
+        <div class="col-md-4">
+            <div class="dish">
+
+                <img src="Images/Pasta_Risotto.png"
+                     alt="Pasta and Risotto">
+
+                <h5>Primi</h5>
+
+                <p>Pasta & Risotto</p>
+
+            </div>
+        </div>
+
+        <!-- Dish 2 -->
+        <div class="col-md-4">
+            <div class="dish">
+
+                <img src="Images/Pizza.png"
+                     alt="Pizza">
+
+                <h5>Pizza</h5>
+
+                <p>Wood-fired classics</p>
+
+            </div>
+        </div>
+
+        <!-- Dish 3 -->
+        <div class="col-md-4">
+            <div class="dish">
+
+                <img src="Images/Dessert.png"
+                     alt="Dessert">
+
+                <h5>Dolci</h5>
+
+                <p>Italian desserts</p>
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- Quote Section -->
+    <div class="quote-box mt-5">
+
+        <p>
+            “La vita è una combinazione di magia e pasta.”
+        </p>
+
+        <small>
+            Life is a combination of magic and pasta.
+        </small>
+
+    </div>
 
 </main>
 
 
-  <!-- FOOTER SECTION  -->
-  <!-- Contains contact info and our names -->
-  <footer class="site-footer">
+<!-- =========================
+FOOTER SECTION
+========================= -->
 
-    <!-- Restaurant address and contact info -->
+<footer class="site-footer">
+
     <p>
-      Via Toledo 193, 84234 Napoli, Italy |
-      11 AM - 10 PM |
-      contact@buoncibo.com
+        Via Toledo 193, Napoli, Italy
     </p>
 
-    <!-- Team member names -->
     <p>
-      Team: Martin Najjar, Rayyan Shahid, Ibrahim Omar-Godane
+        11 AM - 10 PM | contact@buoncibo.com
     </p>
 
-    <!-- Copyright notice -->
     <p>
-      © 2026 Buon Cibo
+        © 2026 Buon Cibo
     </p>
 
-  </footer>
+</footer>
 
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+<!-- Bootstrap JavaScript -->
+<script
+src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+</body>
 </html>
+
